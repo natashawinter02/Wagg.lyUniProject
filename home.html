@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/home.css')}}">
+{% extends "base.html" %} {% block title %}Home{% endblock %}{% block content %}
+</head>
+    <body>
+        <div class="home">
+            <h2> Home Page</h2>
+            <button onclick="location.href='/register_dog';">Register Dog</button>
+            <button onclick="location.href='/register_walker';">Register Walker</button>
+        </div>
+    </body>
+{% endblock %}

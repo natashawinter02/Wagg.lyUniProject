@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffa;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: darkslateblue;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#login-section, #register-section {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:#16d3d3 ;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"], input[type="password"], input[type="confirm-password"], button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #fffa;
+    border-radius: 5px;
+
+}
+
+button  {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkslateblue;
+    text-align: center; 
+}

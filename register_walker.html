@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Register Dog</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='register_walker.css') }}">
+    <script type= "text/javascript" src="{{url_for('static', filename='register_walker.js')}}"></script>
+{% extends "base.html" %} {% block title %}Register Dog Walker Form{% endblock %}{% block content %}
+    </head>
+    <body>
+        <div id="registerWalkerForm">
+            <form id="register-walker-form" action="/register_walker" method="POST">
+                <h2> Personal Information</h2>
+                <input type="text" id="full_name" name="fullName" placeholder="Full Name:">
+                <span id="fullNameError" class="error"></span><br>
+
+                <input type="email" id="email_address" name="emailAddress" placeholder="Email Address:">
+                <span id="emailAddressError" class="error"></span><br>
+
+            <h2>Professional Information</h2>
+                <input type="text" id="experience" name="experience" placeholder="Enter experience e.g. low, medium or high">
+                <span id="experienceError" class="error"></span><br>
+
+                <select id="available" name="available" required> 
+
+                    <option value="">Choose weekly availability:</option>
+                    <option value="1-7 hours">1-7 hours</option>
+                    <option value="7-14 hours">7-14 hours</option>
+                    <option value="14-21 hours">14-21 hours</option>
+                    <option value="21-28 hours">21-28 hours</option>
+                    <option value="28-35 hours">28-35 hours</option>
+                    <option value="35 hours+">35 hours+</option>
+                    </select>
+  
+            <button type="submit" id="register_walker_button">Register</button>
+            </form>
+            <p> Changed your mind? Want to register a Dog? <a href='/home' id="home-link"> Back to Home</a></p>
+        </div>
+    </body>
+</html>
+{% endblock %}

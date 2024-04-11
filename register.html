@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/register.css') }}">
+     <script type= "text/javascript" src="{{url_for('static', filename='register.js')}}"></script>
+{% extends "base.html" %} {% block title %}Register{% endblock %}{% block content %}
+</head>
+<body>
+    <div id="register-section">
+        <h2>Register</h2>
+        <form id="registration-form" action="/register" method="POST">
+            <input type="email" id="register-email" name="registerEmail" placeholder="Email:">
+            <span id="reguser_email_error" class="error"></span><br>
+
+            <input type="password" id="register-password" name="registerPassword" placeholder="Password">
+            <span id="reguser_password_error" class="error"></span><br>
+
+            <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirm Password">
+            <span id="confirmPasswordError" class="error"></span><br>
+
+            <button type="submit" id="register-button">Register</button>
+        </form>
+        <p> Already have an account? <a href="/login" id="login-link">Login</a></p>
+    </div>
+    <div id="login-section" style="display: none;">
+        <h2> Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email">
+            <span id="user_email_error" class="error"></span><br>
+
+            <input type="password" id="login-password" placeholder="Password" >
+            <span id="user_password_error" class="error"></span><br>
+
+            <button type="submit" id="login-button">Login</button>
+        </form>
+        <p> Don't have an account? <a href="/register" id="link-to-register">Register</a></p>
+    </div>
+</body>
+</html>
+{% endblock %}
